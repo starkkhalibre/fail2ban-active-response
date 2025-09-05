@@ -1,0 +1,11 @@
+[suricata-threats]
+enabled = true
+port = all
+bantime = 2m
+findtime = 10m
+maxretry = 1
+logpath = /var/log/suricata/eve.json
+filter = suricata
+action = iptables-allports[name=suricata-threats]
+ignoreip = 202.56.1.133 175.100.65.246 10.0.0.0/16 10.20.0.0/16 127.0.0.1 51.79.142.200 139.99.221.47 141.94.19.229 54.39.188.63 18.229.74.88 44.239.153.89
+ignoreself = true
