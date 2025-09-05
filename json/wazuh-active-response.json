@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "origin": {
+    "name": "node01",
+    "module": "wazuh-execd"
+  },
+  "command": "delete",
+  "parameters": {
+    "extra_args": [],
+    "alert": {
+      "timestamp": "2025-08-30T16:58:21.139+0000",
+      "rule": {
+        "level": 12,
+        "description": "Suricata high severity detected : ET WEB_SERVER PHP tags in HTTP POST",
+        "id": "86605",
+        "firedtimes": 13,
+        "mail": true,
+        "groups": [
+          "suricata",
+          "ids",
+          "severity"
+        ]
+      },
+      "agent": {
+        "id": "011",
+        "name": "adc-01",
+        "ip": "10.0.28.218"
+      },
+      "manager": {
+        "name": "wazuh.manager"
+      },
+      "id": "1756573101.57775489",
+      "full_log": "{\"timestamp\":\"2025-08-30T16:58:20.327136+0000\",\"flow_id\":930271939165262,\"in_iface\":\"ens3\",\"event_type\":\"alert\",\"src_ip\":\"197.220.93.117\",\"src_port\":45844,\"dest_ip\":\"51.79.31.246\",\"dest_port\":80,\"proto\":\"TCP\",\"ip_v\":4,\"pkt_src\":\"wire/pcap\",\"community_id\":\"1:bSH2WnvfBOFfDwDaHoFO4Al+grs=\",\"tx_id\":0,\"alert\":{\"action\":\"allowed\",\"gid\":1,\"signature_id\":2011768,\"rev\":8,\"signature\":\"ET WEB_SERVER PHP tags in HTTP POST\",\"category\":\"Web Application Attack\",\"severity\":1,\"metadata\":{\"created_at\":[\"2010_09_28\"],\"signature_severity\":[\"Informational\"],\"updated_at\":[\"2020_09_18\"]}},\"ts_progress\":\"request_complete\",\"tc_progress\":\"response_complete\",\"http\":{\"hostname\":\"51.79.31.246\",\"http_port\":80,\"url\":\"/?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input\",\"http_user_agent\":\"libredtail-http\",\"http_content_type\":\"text/html\",\"http_method\":\"POST\",\"protocol\":\"HTTP/1.1\",\"status\":404,\"length\":706},\"files\":[{\"filename\":\"/\",\"gaps\":false,\"state\":\"CLOSED\",\"stored\":false,\"size\":325,\"tx_id\":0}],\"app_proto\":\"http\",\"direction\":\"to_server\",\"flow\":{\"pkts_toserver\":4,\"pkts_toclient\":4,\"bytes_toserver\":869,\"bytes_toclient\":1215,\"start\":\"2025-08-30T16:58:19.937491+0000\",\"src_ip\":\"197.220.93.117\",\"dest_ip\":\"51.79.31.246\",\"src_port\":45844,\"dest_port\":80}}",
+      "decoder": {
+        "name": "json"
+      },
+      "data": {
+        "srcip": "197.220.93.117",
+        "timestamp": "2025-08-30T16:58:20.327136+0000",
+        "flow_id": "930271939165262.000000",
+        "in_iface": "ens3",
+        "event_type": "alert",
+        "src_ip": "197.220.93.117",
+        "src_port": "45844",
+        "dest_ip": "51.79.31.246",
+        "dest_port": "80",
+        "proto": "TCP",
+        "ip_v": "4",
+        "pkt_src": "wire/pcap",
+        "community_id": "1:bSH2WnvfBOFfDwDaHoFO4Al+grs=",
+        "tx_id": "0",
+        "alert": {
+          "action": "allowed",
+          "gid": "1",
+          "signature_id": "2011768",
+          "rev": "8",
+          "signature": "ET WEB_SERVER PHP tags in HTTP POST",
+          "category": "Web Application Attack",
+          "severity": "1",
+          "metadata": {
+            "created_at": [
+              "2010_09_28"
+            ],
+            "signature_severity": [
+              "Informational"
+            ],
+            "updated_at": [
+              "2020_09_18"
+            ]
+          }
+        },
+        "ts_progress": "request_complete",
+        "tc_progress": "response_complete",
+        "http": {
+          "hostname": "51.79.31.246",
+          "http_port": "80",
+          "url": "/?%ADd+allow_url_include%3d1+%ADd+auto_prepend_file%3dphp://input",
+          "http_user_agent": "libredtail-http",
+          "http_content_type": "text/html",
+          "http_method": "POST",
+          "protocol": "HTTP/1.1",
+          "status": "404",
+          "length": "706"
+        },
+        "files": [
+          {
+            "filename": "/",
+            "gaps": false,
+            "state": "CLOSED",
+            "stored": false,
+            "size": 325,
+            "tx_id": 0
+          }
+        ],
+        "app_proto": "http",
+        "direction": "to_server",
+        "flow": {
+          "pkts_toserver": "4",
+          "pkts_toclient": "4",
+          "bytes_toserver": "869",
+          "bytes_toclient": "1215",
+          "start": "2025-08-30T16:58:19.937491+0000",
+          "src_ip": "197.220.93.117",
+          "dest_ip": "51.79.31.246",
+          "src_port": "45844",
+          "dest_port": "80"
+        }
+      },
+      "location": "/var/log/suricata/eve.json"
+    },
+    "program": "active-response/bin/host-deny"
+  }
+}
