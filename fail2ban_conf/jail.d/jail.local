@@ -1,0 +1,32 @@
+[critical-threats]
+enabled = true
+port = all
+bantime = 86400    # 24 hours
+action = iptables-allports[name=critical-threats]
+ignoreip = 202.56.1.133 175.100.65.246 10.0.0.0/16 10.20.0.0/1 127.0.0.1 51.79.142.200 139.99.221.47 141.94.19.229 54.39.188.63 18.229.74.88 44.239.153.89
+ignoreself = true
+
+[major-threats]  
+enabled = true
+port = all
+bantime = 21600    # 6 hours
+action = iptables-allports[name=major-threats]
+ignoreip = 202.56.1.133 175.100.65.246 10.0.0.0/16 10.20.0.0/1 127.0.0.1 51.79.142.200 139.99.221.47 141.94.19.229 54.39.188.63 18.229.74.88 44.239.153.89
+ignoreself = true
+
+[minor-threats]
+enabled = true  
+port = all
+bantime = 7200     # 2 hours
+action = iptables-allports[name=minor-threats]
+ignoreip = 202.56.1.133 175.100.65.246 10.0.0.0/16 10.20.0.0/1 127.0.0.1 51.79.142.200 139.99.221.47 141.94.19.229 54.39.188.63 18.229.74.88 44.239.153.89
+ignoreself = true
+
+[informational-threats]
+enabled = true
+port = all  
+bantime = 3600     # 1 hour
+action = iptables-allports[name=informational-threats]
+ignoreip = 202.56.1.133 175.100.65.246 10.0.0.0/16 10.20.0.0/1 127.0.0.1 51.79.142.200 139.99.221.47 141.94.19.229 54.39.188.63 18.229.74.88 44.239.153.89
+ignoreself = true
+

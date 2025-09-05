@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-09-05T08:38:13.839271+0000",
+  "flow_id": 1634318956379448,
+  "in_iface": "ens3",
+  "event_type": "alert",
+  "src_ip": "64.62.156.20",
+  "src_port": 35647,
+  "dest_ip": "51.79.31.246",
+  "dest_port": 443,
+  "proto": "TCP",
+  "ip_v": 4,
+  "pkt_src": "wire/pcap",
+  "metadata": {
+    "flowbits": [
+      "ET.Evil",
+      "ET.DshieldIP"
+    ]
+  },
+  "community_id": "1:5RyPBom8nWQbgjtzUnUJ7TnUdA0=",
+  "alert": {
+    "action": "allowed",
+    "gid": 1,
+    "signature_id": 2403396,
+    "rev": 102753,
+    "signature": "ET CINS Active Threat Intelligence Poor Reputation IP group 97",
+    "category": "Misc Attack",
+    "severity": 2,
+    "metadata": {
+      "affected_product": [
+        "Any"
+      ],
+      "attack_target": [
+        "Any"
+      ],
+      "created_at": [
+        "2013_10_08"
+      ],
+      "deployment": [
+        "Perimeter"
+      ],
+      "signature_severity": [
+        "Major"
+      ],
+      "tag": [
+        "CINS"
+      ],
+      "updated_at": [
+        "2025_08_29"
+      ]
+    }
+  },
+  "direction": "to_server",
+  "flow": {
+    "pkts_toserver": 1,
+    "pkts_toclient": 0,
+    "bytes_toserver": 62,
+    "bytes_toclient": 0,
+    "start": "2025-09-05T08:38:13.839271+0000",
+    "src_ip": "64.62.156.20",
+    "dest_ip": "51.79.31.246",
+    "src_port": 35647,
+    "dest_port": 443
+  }
+}
